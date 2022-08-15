@@ -17,14 +17,12 @@ const ticket4 = new Ticket(4, 'Celia Cruz', 1000, 200);
 const entradas = [];
 entradas.push(ticket1,ticket2,ticket3,ticket4);
 
-let opcionEntrada = Number(parseInt(
-    prompt(
-      `1) Babasonicos - $2900
-       2) El Mato - $5000
-       3) Tren Loco - $1500
-       4) Celia Cruz - $1000`
-    ))
-);
+let opcionEntrada = Number(prompt(
+    `1) Babasonicos - $2900
+    2) El Mato - $5000
+    3) Tren Loco - $1500
+    4) Celia Cruz - $1000`
+));
 
 const ticketComprado = [];
 
@@ -41,6 +39,8 @@ switch(opcionEntrada){
     case 4:
     comprar(opcionEntrada);
     break;
+    default:
+    alert('Opción incorrecta');
 }
 
 function comprar(opcionEntrada){
@@ -50,8 +50,8 @@ function comprar(opcionEntrada){
     this.stock = Number(prompt(`cantidad de entradas`));
     ticketComprado.push(new Ticket(entradas[id].id, entradas[id].nombre, entradas[id].precio * stock, stock));
 
-    alert(`Compro entradas de ${ticketComprado[id].nombre}
-            Cantidad: ${ticketComprado[id].stock}
-            Precio Total: $${ticketComprado[id].precio}`);
+    alert(`Compro entradas de ${ticketComprado[0].nombre}
+            Cantidad: ${ticketComprado[0].stock}
+            Precio Total: $${ticketComprado[0].precio}`);
     console.log(ticketComprado);
 }
