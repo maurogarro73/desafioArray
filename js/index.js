@@ -41,6 +41,7 @@ switch(opcionEntrada){
     break;
     default:
     alert('Opción incorrecta');
+    break;
 }
 
 function comprar(opcionEntrada){
